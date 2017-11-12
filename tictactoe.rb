@@ -59,8 +59,6 @@ loop do
       next
     end
     
-    #Thanks! I thought there was a more efficient way
-    
     #Column
     if (slot%3 == 2)
     column = 1
@@ -90,14 +88,14 @@ loop do
   
   
   
-  # Evaluar si hay ganador
+  # Evaluate if there's a winner
   is_game_finished = evaluate_game(game_board)
   if is_game_finished == true
     puts 'Game over!'
     break
   end
   
-  #Cambiar de usuario
+  #Change the player
   if user_turn == 'X'
     user_turn = 'O'
       else user_turn = 'X'
